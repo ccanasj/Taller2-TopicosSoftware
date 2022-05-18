@@ -13,3 +13,4 @@ RUN composer install \
 RUN a2enmod rewrite
 RUN service apache2 restart
 RUN chmod -R 777 storage
+RUN mv .env.example .env
