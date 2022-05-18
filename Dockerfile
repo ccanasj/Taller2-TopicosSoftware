@@ -21,5 +21,5 @@ RUN composer install \
 --prefer-dist
 
 RUN a2enmod rewrite
-
+RUN echo "ServerName localhost" | sudo tee /etc/apache2/conf.d/fqdn
 RUN service apache2 restart
